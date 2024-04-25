@@ -15,14 +15,14 @@ public class Problem128 {
             hashSet.add(num);
         }
         for (int i = 0; i < nums.length; i++) {
-            if (!hashSet.contains(i - 1)) {
-                number = i;
+            if (!hashSet.contains(nums[i] - 1)) {
+                number = nums[i];
                 while (hashSet.contains(number)) {
                     hashSet.remove(number);
                     number += 1;
                 }
-                if (len < number - i) {
-                    len = number - i;
+                if (len < number - nums[i]) {
+                    len = number - nums[i];
                 }
             }
         }

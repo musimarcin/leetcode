@@ -3,8 +3,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem128 problem = new Problem128();
-        int[] nums = {100,4,200,1,3,2};
-        System.out.println(problem.longestConsecutive(nums));
+        Problem121 problem = new Problem121();
+        String s = "0P";
+        int[] nums = {7,1,5,3,6,4};
+        System.out.println(problem.maxProfit(nums));
+        //System.out.println(problem.isPalindrome(s));
     }
 }
