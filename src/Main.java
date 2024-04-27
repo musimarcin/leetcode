@@ -3,10 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem121 problem = new Problem121();
-        String s = "0P";
+        Problem424 problem = new Problem424();
+        String s = "KRSCDCSONAJNHLBMDQGIFCPEKPOHQIHLTDIQGEKLRLCQNBOHNDQGHJPNDQPERNFSSSRDEQLFPCCCARFMDLHADJADAGNNSBNCJQOF";
         int[] nums = {7,1,5,3,6,4};
-        System.out.println(problem.maxProfit(nums));
-        //System.out.println(problem.isPalindrome(s));
+        System.out.println(problem.characterReplacement(s, 4));
     }
 }
