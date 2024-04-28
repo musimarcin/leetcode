@@ -20,7 +20,8 @@ public class Problem424 {
            }
 
            while (right - left + 1 - freq > k) {
-               hashMap.put(s.charAt(left), hashMap.getOrDefault(c, 0) - 1);
+               char cl = s.charAt(left);
+               hashMap.put(cl, hashMap.getOrDefault(cl, 0) - 1);
                left += 1;
            }
            result = Math.max(result, right - left + 1);

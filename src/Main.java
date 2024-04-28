@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem424 problem = new Problem424();
-        String s = "KRSCDCSONAJNHLBMDQGIFCPEKPOHQIHLTDIQGEKLRLCQNBOHNDQGHJPNDQPERNFSSSRDEQLFPCCCARFMDLHADJADAGNNSBNCJQOF";
+        Problem20 problem = new Problem20();
+        String s = "()[]{}";
         int[] nums = {7,1,5,3,6,4};
-        System.out.println(problem.characterReplacement(s, 4));
+        System.out.println(problem.isValid(s));
     }
 }
