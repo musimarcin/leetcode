@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem20 problem = new Problem20();
+        Problem206 problem = new Problem206();
         String s = "()[]{}";
-        int[] nums = {7,1,5,3,6,4};
-        System.out.println(problem.isValid(s));
+        int[] nums = {4,5,6,7,0,1,2};
+        System.out.println(problem);
     }
 }
