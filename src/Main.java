@@ -2,10 +2,19 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        Problem206 problem = new Problem206();
-        String s = "()[]{}";
-        int[] nums = {4,5,6,7,0,1,2};
-        System.out.println(problem);
+    private static class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
+
+    public static void main(String[] args) {
+        Problem143 problem = new Problem143();
+        String s = "()[]{}";
+        int[] nums = {1,2,3,4,5};
+
+    }
+
 }
