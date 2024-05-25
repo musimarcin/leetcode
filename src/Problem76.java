@@ -10,6 +10,7 @@ public class Problem76 {
         int left = 0;
         int len = Integer.MAX_VALUE;
         String result = "";
+        // hashmaps for both strings
         HashMap<Character, Integer> hashMap = new HashMap<>();
         HashMap<Character, Integer> tMap = new HashMap<>();
         if (s.length() < t.length()) {
@@ -18,11 +19,13 @@ public class Problem76 {
         for (char c : t.toCharArray()) {
             tMap.put(c, tMap.getOrDefault(c,0) + 1);
         }
-
+        // iterate through s string while adding characters to hashmap
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
             hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
+            // using helper function to determine if it is potentially substring
             if (isSub(hashMap, tMap)) {
+                // update result and remove from hashmap characters outside of the window (moving left side of window)
                 while (isSub(hashMap, tMap)) {
                     if (right - left + 1 < len) {
                         len = right - left + 1;
@@ -38,6 +41,8 @@ public class Problem76 {
 
         return result;
     }
+    // helper function to check if hashmap for s string has current character from t string or if theres enough
+    // characters appearing
     boolean isSub(HashMap<Character, Integer> hashMap, HashMap<Character, Integer> tMap) {
         for (char c : tMap.keySet()) {
             if (!hashMap.containsKey(c) || hashMap.get(c) < tMap.get(c)) {

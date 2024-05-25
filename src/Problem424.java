@@ -12,18 +12,20 @@ public class Problem424 {
        int freq = 0;
        HashMap<Character, Integer> hashMap = new HashMap<>();
        for (int right = 0; right < s.length(); right++) {
-           char c = s.charAt(right);
-           hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
-
+           char cr = s.charAt(right);
+           hashMap.put(cr, hashMap.getOrDefault(cr, 0) + 1);
+           // get the most frequent character in string
            for (int val : hashMap.values()) {
                freq = Math.max(val, freq);
            }
-
+           // update left side of window while checking if replacements are greater than k and deleting amount of
+           // character occurances in hashmap with left pointer
            while (right - left + 1 - freq > k) {
                char cl = s.charAt(left);
                hashMap.put(cl, hashMap.getOrDefault(cl, 0) - 1);
                left += 1;
            }
+           // update result with current length if necessary
            result = Math.max(result, right - left + 1);
        }
        return result;

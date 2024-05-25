@@ -9,10 +9,13 @@ public class Problem121 {
         int profit = 0;
         int left = 0;
         int tmp;
+        // set left and right pointer next to each other to create a "window" and check if its not profitable to sell
+        // in this window (right - left < 0) then move left to right
         for (int right = 1; right < prices.length; right++) {
             if (prices[right] - prices[left] < 0) {
                 left = right;
             } else {
+                // if it is profitable then calculate highest profit
                 tmp = prices[right] - prices[left];
                 profit = Math.max(profit, tmp);
             }
