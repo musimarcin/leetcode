@@ -3,8 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Problem269 p = new Problem269();
-        String[] words = {"abcdefgh","bdefghij","cghij","dfghij","efghij","fghij","ghij","hij","ij","j","abcdefghi","bdefghijk","cghijk","dfghijk","efghijk","fghijk","ghijk","hijk","ijk","jk","k"};
-        System.out.println(p.foreignDictionary(words));
+        Problem152 p = new Problem152();
+        int[] nums = {0,10,10,10,10,10,10,10,10,10,-10,10,10,10,10,10,10,10,10,10,0};
+        int res = p.maxProduct(nums);
+        System.out.println(res);
     }
 }
